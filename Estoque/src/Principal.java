@@ -1,6 +1,9 @@
 import br.com.Ferreira.date.Date;
 import br.com.Ferreira.estoqueProdutos.Sabonete;
+import br.com.Ferreira.estoqueProdutos.TiposProdutos;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -35,8 +38,18 @@ public class Principal {
 
 
         Sabonete sab2 = new Sabonete();
-        sab2.setNome("dove");
+        sab2.setNome("Principia");
+        sab2.setQuantidade(10);
+        sab2.setValor(17.50);
+        sab2.setDescricao("Esse produto tem como foco limpeza facial");
+        sab2.setCodigo(789456129);
+        sab2.setValidade("17/02/2026");
         sab2.getNome();
+
+        ArrayList<TiposProdutos> listaProdutos = new ArrayList<>();
+        listaProdutos.add(sab);
+        listaProdutos.add(sab2);
+        System.out.println(listaProdutos);
 
     }
 }

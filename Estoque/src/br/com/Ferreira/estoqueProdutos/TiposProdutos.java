@@ -16,6 +16,12 @@ public class TiposProdutos {
     private int codigo;
     private String validade;
 
+
+    @Override
+    public String toString() {
+        return "Nome do Produto: " + getNome() + ". Descrição: " + getDescricao() + ". Valor: " + getValor() + ". Quantidade: " + getQuantidade() + ". Codigo: " + getCodigo() + ". Validade: " + getValidade();
+    }
+
     public String getNome() {
 
         System.out.println(nome);
@@ -27,6 +33,9 @@ public class TiposProdutos {
     }
 
     public String getDescricao() {
+        if (descricao == null) {
+            descricao = "PRODUTO SEM DESCRIÇÃO";
+        }
         return descricao;
     }
 
@@ -35,6 +44,9 @@ public class TiposProdutos {
     }
 
     public double getValor() {
+        if (valor == 0) {
+            valor = 0;
+        }
         return valor;
     }
 
@@ -44,7 +56,6 @@ public class TiposProdutos {
 
 
     public int getQuantidade() {
-
         return quantidade;
     }
 
@@ -61,6 +72,9 @@ public class TiposProdutos {
     }
 
     public String getValidade() {
+        if (validade == null) {
+            validade = "VALIDADE INDEFINIDA";
+        }
         return validade;
     }
 
